@@ -6,4 +6,4 @@ before_install:
   - docker build -t adeel/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run adeel/docker-react npm run test -- --coverage
+  - docker run -e CI=true adeel/docker-react npm run test
